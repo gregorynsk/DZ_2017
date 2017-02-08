@@ -26,9 +26,9 @@ $bd=  parse_ini_string($ini_string, true);
 //var_dump($bd);
 
 $bd_items = array_keys($bd);
-$bd_item1 = array_slice($bd['игрушка мягкая мишка белый'], '0', '4', 'true');
-$bd_item2 = array_slice($bd['одежда детская куртка синяя синтепон'], '0', '4', 'true');
-$bd_item3 = array_slice($bd['игрушка детская велосипед'], '0', '4', 'true');
+$bd_item1 = array_slice($bd['игрушка мягкая мишка белый'], '0', '4', true);
+$bd_item2 = array_slice($bd['одежда детская куртка синяя синтепон'], '0', '4', true);
+$bd_item3 = array_slice($bd['игрушка детская велосипед'], '0', '4', true);
 
 echo "<h2>Корзина</h2>";
 notice($bd_items);

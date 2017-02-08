@@ -34,15 +34,19 @@ echo '<br>';
 </html>
 
 <?
-var_dump($_POST['id']);
-if (!empty($_POST['id'])){
-    print_news_post ($news);
-}
+var_dump($_POST['id']);var_dump(isset($_POST['id']));
 
-if (!is_numeric($_POST['id']) && !empty($_POST['id'])){
+if (!empty($_POST['id']) && !is_numeric($_POST['id'])){
 
     header("HTTP/1.0 404 Not Found");
 }
+
+if (isset($news[$_POST['id']]) ){
+    print_news_post ($news[$_POST['id']]);
+} else {
+    all_news($news);
+}
+
 
 ?>
 
